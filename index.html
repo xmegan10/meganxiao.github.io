@@ -17,9 +17,9 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
+				<!-- Header -->		
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<!---<span class="logo"><img src="images/logo.svg" alt="" /></span>-->
 						<h1>Hi, I'm Megan Xiao</h1>
 						<p>An aspiring data scientist and analyst, proficient in R and Python<br />
 						<!-- remove this section later if not necessary --> TBA <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
@@ -27,6 +27,11 @@
 
 				<!-- Nav -->
 					<nav id="nav">
+						<button id="menubar"class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse" onclick="menuBar()">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
 						<ul>
 							<li><a href="#intro" class="active">About Me</a></li>
 							<li><a href="#first">Experience & Education</a></li>
@@ -179,6 +184,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function menuBar() {
+					menuList = document.getElementById('nav')
+					menuList.classList.toggle('open')
+				}
+			</script>
 
 	</body>
 </html>
