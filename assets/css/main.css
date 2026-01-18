@@ -2639,6 +2639,7 @@ input, select, textarea {
 
 	header.major {
 		margin-bottom: 3em;
+		text-align: center;
 	}
 
 		header.major h2 {
@@ -2814,25 +2815,71 @@ input, select, textarea {
 		list-style: none;
 	}
 
-		.features li {
-			width: calc(33.33333% - 2em);
-			margin-left: 2em;
-			margin-top: 3em;
-			padding: 0;
+	.features > ul > li ul {
+		padding-left: 0.5cm;
+		list-style-type: disc;
+	}
+
+	.features >ul {
+  list-style-type: none;
+  padding-left: 10px;
+  text-align: start;
+	}
+
+	.features>ul>li {
+	position: relative;
+	margin: 0;
+	padding-bottom: 1em;
+	padding-left: 20px;
+	}
+
+
+	.features>ul>li:before {
+	background-color:gray;
+	left: 4px;
+	top: 10px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	content: '';
+	position: absolute;
+	bottom: 1cm;
+	padding-right: 3px;
+	z-index: 2;
+	}
+
+	.features>ul>li::after {
+	display: block;
+	content: '';
+	position: absolute;
+	left: 9px;
+	top: 10px;
+	width: 1px;
+	height: 100%;
+	background-color: grey;
+	z-index: 1;
+	}
+		.jobPosition {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-left: 10px;
 		}
 
-			.features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3) {
-				margin-top: 0;
-			}
+		.description{
+			padding-left: 10px;
+		}
 
-			.features li > :last-child {
-				margin-bottom: 0;
-			}
+		.features > ul > li:last-child::after {
+    	display: none;
+	}
+
 
 		@media screen and (max-width: 980px) {
 
 			.features li {
-				width: calc(50% - 2em);
+				width: 100%;
+				position: relative;
 			}
 
 				.features li:nth-child(3) {
@@ -2845,14 +2892,35 @@ input, select, textarea {
 
 			.features {
 				width: 100%;
-				margin: 0 0 2em 0;
+				margin: 0;
+				padding: 0;
 			}
 
 				.features li {
 					width: 100%;
-					margin-left: 0;
-					margin-top: 2em;
+					padding: 0 0 3em 30px;
+					margin: 0;
+					position: relative;
+					display: block;
+					list-style: none;
 				}
+				
+				.features li:after {
+					content: '';
+					position: absolute;
+					left: 5px;      
+					top: 5px;         
+					width: 2px;       
+					height: 100%;    
+					background: gray;
+					z-index: 1;
+					display: block;
+    				}
+
+					.features li:last-child:after {
+       				 display: none;
+    				}
+
 
 					.features li:nth-child(2), .features li:nth-child(3) {
 						margin-top: 2em;
@@ -3218,7 +3286,7 @@ input, select, textarea {
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		background-color: #ffffff;
 		color: #636363;
-		position: absolute;
+		position:absolute;
 		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
@@ -3227,6 +3295,7 @@ input, select, textarea {
 		border-top-right-radius: 0.25em;
 		cursor: default;
 		text-align: center;
+		z-index: 999;
 	}
 
 		#nav input, #nav select, #nav textarea {
@@ -3319,16 +3388,33 @@ input, select, textarea {
 				#nav.alt ul li a {
 					font-size: 0.9em;
 				}
+		#menubar {
+			display: none
+		}
 
 		@media screen and (max-width: 736px) {
 
+			#nav {
+				opacity: 0.7;
+				padding: 0.2em;
+			}
+
 			#nav ul{
 				display: none;
+				max-height: 0;
+				overflow: hidden;
+				transition: opacity 0.3s ease, max-height 0.3s ease;
 			}
 
 			#nav.open ul{
 				display: block;
-				text-align: center;
+				opacity: 1;
+				max-height: 200px;
+			}
+
+			#nav.open li{
+				display:block;
+				text-align: right;
 			}
 
 				#nav + #main {
@@ -3336,6 +3422,7 @@ input, select, textarea {
 				}
 
 				#menubar.navbar-toggle {
+				display: block;
 				position: relative;
 				float: left;
 				padding: 9px 10px;
