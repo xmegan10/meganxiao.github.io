@@ -34,7 +34,7 @@
 							</button>
 						<ul>
 							<li><a href="#intro" class="active">About Me</a></li>
-							<li><a href="#first">Experience & Education</a></li>
+							<li><a href="#first">Experience</a></li>
 							<li><a href="#second">Projects</a></li>
 							<li><a href="#cta">Contact Me</a></li>
 						</ul>
@@ -61,10 +61,10 @@
 								</div>
 							</section>
 
-						<!-- Experience & Education -->
+						<!-- Experience -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Experience & Education</h2>
+									<h2>Experience</h2>
 								</header>
 								<div class="features">
 									<ul>
@@ -128,32 +128,45 @@
 									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
 									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
 								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+								<div class="grid-container">
+									<a href = "generic.html">
+									<div class = "project-item">
+										<img height ="300px" src="images/pic01.jpg" alt=""> <!-- note: replace src with diff image later :)-->
+										<div class="hidden-text">
+											<h4>Project Title</h4>
+											<h5><em>Date</em> </h5>
+											<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue
+									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+										</div>
+									</div>
+									</a>
+									
+									<div class = "project-item">
+										<img height ="300px" src="images/pic01.jpg" alt=""> <!-- note: replace src with diff image later :)-->
+										<div class="hidden-text">
+											<h4>Project Title</h4>
+											<h5><em>Date</em> </h5>
+											<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue
+									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+										</div>
+									</div>
+
+									<div class = "project-item">
+										<img height ="300px" src="images/pic01.jpg" alt=""> <!-- note: replace src with diff image later :)-->
+										<div class="hidden-text">
+											<h4>Project Title</h4>
+											<h5><em>Date</em> </h5>
+											<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue
+									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+										</div>
+									</div>
+								</div>
+
+								
+								<!--<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>-->
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a href="generic.html" class="button">See Full Project List → </a></li>
 									</ul>
 								</footer>
 							</section>
@@ -161,16 +174,54 @@
 						<!-- Contact Me -->
 							<section id="cta" class="main special">
 								<header class="major">
-									<h2>Congue imperdiet</h2>
+									<h2>Contact Me</h2>
 									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
 									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
 								</header>
-								<footer class="major">
+								<div class ="contact-box">
+									<form id = "myForm" class = "contact-form" action="https://api.web3forms.com/submit" method="POST">
+										 <input type="hidden" name="access_key" value="4ec04335-4123-44e2-9517-281180b268b2">
+										<div class = "form-group">
+											<label for = "fname"> First Name *</label>
+											<input type="text" id="fname" name="firstname" placeholder="Your name.." required class="form-element">
+										</div>
+										
+										<div class = "form-group">
+											<label for="lname">Last Name *</label>
+											<input type="text" id="lname" name="lastname" placeholder="Your last name.." required class="form-element">
+										</div>
+
+										<div class = "form-group">
+											<label for="email">Email Address *</label>
+											<input type="email" id="email" name="email" placeholder="Your email.." required class="form-element">
+										</div>
+
+										<div class = "form-group">
+											<label for="phone-num">Phone Number</label>
+											<input type = "text"
+											id="phone-num" name="phone-num" placeholder="Your phone number.." class="form-element">
+										</div>
+
+
+										<div class = "form-group full">
+											<label for="message">Your Message *</label>
+											<textarea id="message" name="message" placeholder="Write something.." style="height:200px" class="form-element"></textarea>
+										</div>
+										<div class = "submit-group">
+											<input type="submit" value="Submit">
+
+										</div>
+										
+									</form>
+								</div>
+
+
+								<!--<footer class="major">
 									<ul class="actions special">
 										<li><a href="generic.html" class="button primary">Get Started</a></li>
 										<li><a href="generic.html" class="button">Learn More</a></li>
 									</ul>
-								</footer>
+								</footer>-->
 							</section>
 
 					</div>
@@ -215,11 +266,19 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
 			<script>
+				// Screen shrinks, reveal small nav bar
 				function menuBar() {
 					menuList = document.getElementById('nav')
 					menuList.classList.toggle('open')
 				}
+
+				//clear field after form submission
+				const myForm = document.getElementById("myForm");
+				myForm.addEventListener('submit', function(event){
+					myForm.reset();
+				});
 			</script>
 
 	</body>
