@@ -1,4 +1,4 @@
-Hi, I'm Megan Xiao. This is my repository for storing my Data Science Portfolio website.
+Hi, I'm Megan Xiao. This is my repository for storing my Data Science Portfolio website. Link to website: https://xmegan10.github.io/meganxiao.github.io/
 
 
 Credits:
