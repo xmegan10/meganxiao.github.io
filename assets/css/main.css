@@ -2940,11 +2940,13 @@ input, select, textarea {
 
 		.project-item{
 			display: flex;
+			position: relative;
 			padding: 0;
 			border-radius: 2px;
 			transition: transform 0.3s ease, box-shadow 0.3s ease;
     		cursor: pointer;
     		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			background-color: transparent;
 		}
 
 		.project-item:hover{
@@ -2954,45 +2956,34 @@ input, select, textarea {
 		}
 
 		.project-item img{
-			filter: brightness(100%);
+			filter: brightness(80%);
 			transition: filter 0.3s ease;
 			width: 100%;
 			display: block;
 			object-fit: cover;
 		}
 
-
-		.project-item:hover img{
-			filter: brightness(70%);
+		.project-item img:hover{
+			filter: brightness(50%);
 		}
 
-		.hidden-text {
-			display: none;
-			position: absolute;
-			color:white;
-		}
-
-		.project-item:hover .hidden-text{
+		.project-text {
+			position:absolute;
+			top: 0;
+			left: 0;
+			color: white;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			align-items: center;
-			padding:20px;
-			color:white;
-			font-size: clamp(15px, 4vw, 10px);
+			background-color: transparent;
+			margin: 10px;
+			font-size: medium;
 		}
 
-		.hidden-text:hover img{
-			filter: brightness(70%);
+		.project-text h4 {
+			color: white !important;
 		}
 
-		.project-item:hover .hidden-text h4{
-			color:white !important;
-		}
-
-		.project-item:hover .hidden-text h5{
-			color:white !important;
-		}
 
 /* Statistics */
 
