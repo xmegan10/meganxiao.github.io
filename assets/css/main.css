@@ -3929,6 +3929,11 @@ input, select, textarea {
 		}
 }
 
+/*References (for writing projects)*/
+#references{
+	text-indent: 50px;
+}
+
 /* Footer */
 
 	#footer {
