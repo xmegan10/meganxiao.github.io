@@ -2409,6 +2409,7 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 3em 0;
 			width: 100%;
+			height: auto;
 		}
 
 			.image.main img {
@@ -2947,6 +2948,7 @@ input, select, textarea {
     		cursor: pointer;
     		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			background-color: transparent;
+			justify-content: space-around;
 		}
 
 		.project-item:hover{
@@ -2956,15 +2958,11 @@ input, select, textarea {
 		}
 
 		.project-item img{
-			filter: brightness(80%);
+			filter: brightness(50%);
 			transition: filter 0.3s ease;
 			width: 100%;
 			display: block;
 			object-fit: cover;
-		}
-
-		.project-item img:hover{
-			filter: brightness(50%);
 		}
 
 		.project-text {
@@ -3864,12 +3862,17 @@ input, select, textarea {
 	flex-direction: row;
 }
 
+.research-question {
+	padding-right: 2em;
+}
+
 .result {
 	display: flex;
 	justify-content: start;
-	align-items: end;
+	align-items: start;
 	flex-direction: column;
-	text-align: end;
+	text-align: start;
+	padding-right: 2em;
 }
 
 
